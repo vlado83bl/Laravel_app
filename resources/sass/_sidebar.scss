@@ -1,0 +1,133 @@
+.sidebar {
+    flex: 0 0 18%;
+    max-width: 18%;
+    min-height: 100%;
+    background-color: var(--color-background-light);
+    overflow-x: hidden;
+}
+
+.weather {
+    color: rgb(214, 180, 87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.7rem;
+    line-height: normal;
+    min-height: 7.15rem;
+
+    & p {
+        margin-bottom: .3rem;
+    }
+
+    &__icon {
+        font-size: 2.3rem;
+        margin-bottom: .8rem;
+
+        &-box {
+            background-image: linear-gradient(to bottom right, rgb(248, 188, 5), rgb(230, 109, 4));
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        position: relative;
+
+        &--symbol {
+            position: absolute;
+            top: -.6rem;
+        }
+    }
+
+    &__date {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}
+
+.side-nav {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    list-style: none;
+    margin-top: 1rem;
+
+    &__item {
+
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+
+        }
+
+        &--dropdown {
+            list-style: none;
+            margin-left: 9rem;
+            color: var(--text-muted-light);
+            display: none;
+
+            &-item {
+                margin: 2rem 0;
+            }
+
+            &-link {
+                text-decoration: none !important;
+                color: inherit;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: var(--text-muted-light);
+        text-decoration: none;
+        display: block;
+        padding: 0.6rem 2rem;
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__box {
+        background-color: rgb(32, 37, 52);
+        margin-right: 2.5rem;
+        padding: 1rem 1.5rem;
+        border-radius: .5rem;
+
+        &-active {
+            background-color: white;
+
+            & i {
+                color: rgb(91, 91, 91);
+            }
+        }
+    }
+
+    &__icon {
+        color: rgb(192, 184, 185);
+        font-size: 2rem;
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+}
+
+.active {
+    color:white;
+}
+
+.responsiveSidebar {
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: 1800px) {
+        align-items: center;
+        margin-left: 3rem;
+    }
+}

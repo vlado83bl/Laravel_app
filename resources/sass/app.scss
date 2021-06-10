@@ -1,0 +1,24 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//App Styling
+@import '_layout.scss';
+@import '_header.scss';
+@import '_sidebar.scss';
+@import '_dashboard.scss';
+@import '_profile.scss';
+@import '_support.scss';
+@import '_users.scss';
+@import '_base.scss';
+@import '_activities.scss';
+@import '_assets.scss';
+@import '_communications.scss';
+@import '_reports.scss';
+
+

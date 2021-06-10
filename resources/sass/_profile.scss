@@ -1,0 +1,190 @@
+.profile {
+    height: 100%;
+    background-color: black;
+
+    &__header {
+        background-color: var(--color-background-light);
+        padding: 2rem;
+        margin-bottom: 3rem;
+        height: 20%;
+        position: relative;
+
+        &--user {
+
+            &-name {
+                font-size: 1.6rem;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+
+            &-mail {
+                font-size: 1.4rem;
+                color: var(--text-muted);
+            }
+
+            &-photo {
+                height: 6rem;
+                width: 6rem;
+                border-radius: 50%;
+
+                &-notification {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    border-radius: 100px;
+                    position: absolute;
+                    bottom: 4rem;
+                    left: 6.2rem;
+                }
+            }
+        }
+
+        &--data {
+            color: var(--text-muted);
+            display: flex;
+
+            & i {
+                font-size: 1.6rem;
+            }
+
+            &-1 {
+                margin-right: 3rem;
+                border-left: 1px solid var(--text-muted);
+                padding-left: 3rem;
+            }
+
+            &-2 {
+                margin-right: 3rem;
+                border-left: 1px solid var(--text-muted);
+                padding-left: 3rem;
+            }
+
+            &-contact {
+
+                &-text {
+                    font-size: 1.2rem;
+                    color: var(--text-muted-dark);
+
+                    & span {
+                        color: var(--text-muted-light);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.personal {
+    display: flex;    
+    height: 76%;
+    font-size: var(--font-size-small);
+    color: var(--text-muted-dark);
+
+    &__three-dots {
+        @include three-dots;
+    }
+
+    &-active {
+        color: var(--blue-background) !important;
+    }
+
+    & > * {
+        background-color: var(--color-background-light);
+        
+    }
+
+    & label {
+        margin-bottom: 0;
+    }
+
+    &-categories {
+        flex: 0 0 18%;
+        margin-right: 3rem;
+        padding: 2rem 1rem;
+        list-style: none;
+
+        &__list {
+            list-style: none;
+        }
+
+        &__link:link,
+        &__link:visited {
+            color: var(--text-muted-light);
+            text-decoration: none;
+            display: block;
+            padding: 0.6rem 1rem;
+        }
+    }
+
+    &-label {
+        flex: 0 0 18% !important;
+    }
+
+    &-info {
+        flex: 1;
+        padding: 2rem;
+
+        &__field {
+            margin-bottom: 2.8rem;
+
+            &--icon {
+                font-size: var(--font-size-regular);
+                color: var(--blue-background);
+            }
+
+            &--radio {
+
+                &-gender {
+                    flex: 0 0 30% !important;
+                }
+
+                &-button {
+                    height: 2rem;
+                    width: 2rem;
+                    background-color: var(--color-background-dark);
+                    border: 1px solid var(--text-muted-dark);
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        & input {
+            flex: 1;
+            margin-right: 5rem;
+            @include input-field;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.label-field {
+    margin-bottom: 0;
+    font-weight: 600;
+    flex: 0 0 30%;
+}
+
+.input-field {
+    flex: 1;
+    align-items: center;
+    color: var(--text-muted);
+    background-color: var(--color-background-dark);
+    border-radius: 3px;
+    border: 1px solid var(--text-muted-dark);
+    height: 3.5rem;
+    padding-left: 1.5rem;
+    margin-right: 5rem;
+
+    & p {
+        margin-bottom: 0;
+    }
+}
+
+.radio-button__active {
+    border: 1px solid var(--blue-background);
+
+    & + p {
+        color: var(--blue-background);
+    }
+}

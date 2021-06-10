@@ -1,0 +1,160 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+//MIXINS
+
+@mixin user-picture-small {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+@mixin user-picture-medium {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+@mixin ship-picture-small {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+@mixin add-item {
+    background-color: var(--blue-background);
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: white;
+    font-weight: 400;
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@mixin pagination {
+    & .active {
+        background-color: var(--blue-background);
+    }
+
+    &--list {
+        font-size: var(--font-size-extra-small);
+    }
+
+    &--item,
+    &--prev,
+    &--next {
+        color: white;
+        padding: .4rem 0.8rem;
+        border-radius: 50%;
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: #202534;
+        }
+    }
+}
+
+@mixin three-dots {
+    color: var(--blue-background);
+    font-size: var(--font-size-large);
+    cursor: pointer;
+}
+
+@mixin upload {
+    &--label {
+        background-color: #202534;
+        border-radius: 3px;
+        padding: .4rem 3.2rem .4rem 1.2rem;
+        margin-left: 5rem;
+        font-weight: 500;
+        font-style: italic;
+        cursor: pointer;
+    }
+
+    &--input {
+        display: none;
+    }
+}
+
+@mixin input-field {
+    color: var(--text-muted);
+    background-color: var(--color-background-dark);
+    border-radius: 3px;
+    border: 1px solid var(--text-muted-dark);
+    height: 3rem;
+    padding-left: 1.5rem;
+}
+
+@mixin blue-header {
+    color: var(--blue-background);
+    font-size: var(--font-size-regular);
+}
+
+@mixin search {
+    width: 100%;
+
+    &--input {
+        color: var(--text-muted);
+        padding: .9rem 2rem .9rem 3.8rem;
+        background-color: var(--color-background-light);
+        border: 1px solid rgba(160, 153, 159, .6);
+        border-radius: 20px;
+
+        &-icon {
+            color: rgba(160, 153, 159, .8);
+            width: 0;
+            transform: translateX(1.8rem);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 800;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+//UTILITY CLASSES
+.u-text-muted {
+    color: rgb(160, 153, 159);
+}
+
+.u-text-muted-light {
+    color: rgb(192, 184, 185);
+}
+
+.u-text-muted-dark {
+    color: rgb(97, 85, 92);
+}
+
+.u-text-active {
+    color: var(--blue-background)
+}
+    

@@ -1,0 +1,67 @@
+.vessels {
+    margin: 2.5rem;
+    color: var(--text-muted);
+    background-color: var(--color-background-light);
+    font-size: var(--font-size-small);
+
+    &__search {
+        @include search;
+
+        &--input {
+            width: 38%;
+        }
+    }
+
+    &__header {
+        color: var(--text-muted-dark);
+        font-weight: 700;
+
+        &--title {
+            text-align: center;
+        }
+    }
+
+    &__list {
+        font-weight: 700;
+
+        &--item {
+            margin-bottom: 3.5rem;
+            & p {
+                text-align: center;
+            }
+            
+            &-number {
+                margin-right: 6rem;
+            }
+            
+            &-ship {
+                text-align: left !important;
+                flex: 0 0 30%;
+                padding-left: 2.7rem;
+            }
+            &-coordinates {
+                flex: 0 0 30%;
+            }
+            &-time {
+                flex: 0 0 15%;
+            }
+            &-date {
+                flex: 0 0 15%;
+            }
+
+        }
+    }
+
+    &__upload {
+        @include upload;
+    }
+
+    &__pagination {
+        @include pagination;
+    }
+}
+
+.vesells__search--input-add {
+    @include add-item;
+}
+
